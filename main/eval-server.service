@@ -1,0 +1,11 @@
+[Unit]
+Description=Web service for Performline DevOps Eval
+
+[Service]
+User=root
+WorkingDirectory=/usr/bin
+ExecStart=/usr/bin/eval-server.bin
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
