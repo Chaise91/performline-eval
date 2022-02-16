@@ -10,7 +10,7 @@ sudo systemctl start eval-server.service
 sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
 sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8086'''
 
-session = boto3.session.Session(profile_name='499413842645')
+session = boto3.session.Session(profile_name='performline')
 resource=session.resource('ec2', region_name="us-east-1")
 
 #Create and configure security group
